@@ -7,15 +7,16 @@ export const reducer = (state:any='', action: ActionFunc) => {
         case Actions.ADD:
             return state+=action.payload;
         case Actions.RESULT:
-            switch(state.match(regExp)[0]){
+            var arr = state.split(regExp);
+            switch (state.match(regExp)[0]) {
                 case '+':
-                    return (+state[state.match(regExp).index-1])+(+state[state.match(regExp).index+1]);
+                    return +arr[0] + (+arr[1]);
                 case '-':
-                    return (+state[state.match(regExp).index-1])-(+state[state.match(regExp).index+1]);
+                    return +arr[0] - (+arr[1]);
                 case '*':
-                    return (+state[state.match(regExp).index-1])*(+state[state.match(regExp).index+1]);
+                    return +arr[0] * +arr[1];
                 case '/':
-                    return (+state[state.match(regExp).index-1])/(+state[state.match(regExp).index+1]);
+                    return +arr[0] / +arr[1];
                 default:
                     return state
             }
