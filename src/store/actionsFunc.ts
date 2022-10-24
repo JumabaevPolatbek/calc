@@ -12,3 +12,9 @@ export const result = () => {
         type: Actions.RESULT,
     }
 };
+
+export const reset = () => {
+    return {
+        type:Actions.RESET
+    }
+}

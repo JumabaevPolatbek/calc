@@ -56,3 +56,7 @@ button{
 .result{
     font-size: 30px;
 }
+.ac>button{
+    margin-top: 10px;
+    width: 100%;
+}

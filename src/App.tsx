@@ -3,10 +3,9 @@ import Button from './Components/Button';
 import WindowCalc from './Components/WindowCalc';
 import { arrNumbers,arrSymbols } from './store/data';
 import './App.css'
-import { useSelector } from 'react-redux';
+import ButtonAC from './Components/ButtonAC';
 
 function App() {
-  const item = useSelector(state => state);
   return (
     <div className='calc'>
       <div className='calc-window'>
@@ -48,7 +47,8 @@ function App() {
             return <Button item={symbol} key={index}/>
           })}
         </div>
-        </div>
+      </div>
+      <ButtonAC/>
     </div>
   )
 }

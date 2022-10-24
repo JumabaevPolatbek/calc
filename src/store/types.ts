@@ -1,6 +1,8 @@
+
 export enum Actions{
     ADD = "ADD",
-    RESULT="RESULT"
+    RESULT = "RESULT",
+    RESET="RESET"
 }
 
 type Add = {
@@ -10,5 +12,7 @@ type Add = {
 type Result = {
     type:Actions.RESULT
 }
-
-export type ActionFunc=Add|Result
+type Reset = {
+    type:Actions.RESET
+}
+export type ActionFunc=Add|Result|Reset
