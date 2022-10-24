@@ -41,13 +41,6 @@ export const reducer = (state: any = '', action: ActionFunc) => {
                     return state = (+arr[0] * (+arr[1])).toString();
                 case '/':
                     return state = (+arr[0] / (+arr[1])).toString();
-                    return +arr[0] + (+arr[1]);
-                case '-':
-                    return +arr[0] - (+arr[1]);
-                case '*':
-                    return +arr[0] * +arr[1];
-                case '/':
-                    return +arr[0] / +arr[1];
                 default:
                     return state
             }
