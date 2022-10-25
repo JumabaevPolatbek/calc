@@ -26,7 +26,7 @@ export const reducer = (state: any = '', action: ActionFunc) => {
             if (state.startsWith('0')) {
                 return state=action.payload
             }
-            if (state.search(regExp)!==-1 && action.payload==='0') {
+            if (state.search('/')!==-1 && action.payload==='0') {
                 return state
             }
             return state+=action.payload
